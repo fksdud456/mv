@@ -73,6 +73,10 @@ footer {
 			<li><a href="productlist.do"> Product List</a></li>
 			<li><a href="productadd.do"> product Add</a></li>
 		</ul>
+		<ul>
+			<li><a href="itemlist.do">Item List</a></li>
+			<li><a href="itemadd.do">Item Add</a></li>
+		</ul>
 	</header>
 	<section>
 	<!-- JSTL  -->
