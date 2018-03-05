@@ -31,4 +31,12 @@ public class UserController {
 		m.addAttribute("center", "user/add");
 		return "main";
 	}
+	
+	@RequestMapping("/useraddimpl.do")
+	public String addimpl(Model m, User user) {
+		/* DB에 insert 하는 부분 추가 */
+		m.addAttribute("center", "user/addok");
+		return "main";
+	}
+	
 }
