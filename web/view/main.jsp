@@ -23,6 +23,10 @@ ul, ol {
 	list-style: none;
 }
 
+tr, th, td {
+	border : 1px solid black;
+	border-collapse: collapse;
+}
 /* Header CSS*/
 header {
 	margin: 0 auto; 
