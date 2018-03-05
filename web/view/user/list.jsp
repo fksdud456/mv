@@ -15,21 +15,22 @@
 </style>
 <div id = "main_center">
 <h1>User List Page</h1>
-
-<table>
-<thead>
-	<tr><th>ID</th><th>PWD</th><th>NAME</th></tr>
-</thead>
-
-<tbody>
-<c:forEach var ="user" items="${userlist }">
-<tr>
-	<td>${user.id }</td>
-	<td>${user.pwd}</td>
-	<td> ${user.name }</td>
-</tr>
-</c:forEach>
-</tbody>
-</table>
-
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>PWD</th>
+				<th>NAME</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="user" items="${userlist }">
+				<tr>
+					<td>${user.id }</td>
+					<td>${user.pwd}</td>
+					<td>${user.name }</td>
+				</tr>
+			</c:forEach>
+		</tbody>
+	</table>
 </div>
