@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=EUC-KR"
 	pageEncoding="EUC-KR"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE>
 <html>
 <head>
@@ -62,6 +62,7 @@ footer {
 </head>
 <body>
 	<header>
+		<a href="main.do"> <spring:message code="welcome.txt" /></a>
 		<ul>
 			<li><a href="userlist.do"> User List</a></li>
 			<li><a href="useradd.do"> User Add</a></li>
