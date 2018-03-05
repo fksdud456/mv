@@ -13,12 +13,15 @@
 }
 </style>
 <script>
+
 	$(document).ready(function() {
 		$('#r_bt').click(function() {
 			var c = confirm('등록 하시겠습니까?');
 			if (c == true) {
-				$('#user_register').get();
-				$('#user_register').attr('action', 'useraddimpl.do');
+				$('#user_register').attr({
+					'method' : 'post',
+					'action' : 'useraddimpl.do'
+				});
 				$('#user_register').submit();
 			};
 		});
