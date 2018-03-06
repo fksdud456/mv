@@ -26,6 +26,10 @@ ul, ol {
 tr, th, td {
 	border : 1px solid black;
 	border-collapse: collapse;
+	padding : 4px;
+}
+img {
+	height : 80px;
 }
 /* Header CSS*/
 header {
