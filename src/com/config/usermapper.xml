@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.UserMapper">
+	<resultMap type="user" id="userResult">
+		<result column="id" property="id"/>
+		<result column="pwd" property="pwd"/>
+		<result column="name" property="name"/>
+	</resultMap>
+	
+	<select id="select" parameterType="String" resultMap="userResult">
+		SELECT * FROM T_USER WHERE ID=#{obj}
+	</select>
+	<select id="selectall" resultType="user">
+		SELECT * FROM T_USER
+	</select>
+	<insert id="insert" parameterType="user">
+		INSERT INTO T_USER VALUES (#{id},#{pwd},#{name})
+	</insert>
+	<update id="update" parameterType="user">
+		UPDATE T_USER SET PWD=#{pwd},NAME=#{name} WHERE ID=#{id}
+	</update>
+	<delete id="delete" parameterType="String">
+		DELETE FROM T_USER WHERE ID=#{obj}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+

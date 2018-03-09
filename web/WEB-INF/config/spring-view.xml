@@ -41,6 +41,33 @@
 	    <property name="maxUploadSize" value="500000000"/>
 	</bean>
     
+     <!-- 1. Database Setting -->
+ 	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+ 		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+ 		<property name="url" value="jdbc:oracle:thin:@70.12.114.100:1521:xe"/>
+ 		<property name="username" value="shop2"/>
+ 		<property name="password" value="111111"/>
+ 	</bean>
+
+ 	<!-- 2. Transaction Setting -->
+ 	<bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+ 		<property name="dataSource" ref="dataSource"/>
+ 	</bean>
+ 	
+ 	<!-- 3. MyBatis Setting -->
+ 	<bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+ 		<property name="dataSource" ref="dataSource"/>
+ 		<property name="configLocation" value="classpath:com/config/mybatis.xml"/>
+ 	</bean>
+ 	<!-- 4. Spring Mybatis Connect -->
+ 	<bean id="sqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+ 		<constructor-arg ref="sqlSessionFactory"/>
+ 	</bean>
+ 	<!-- 5. Mapper Setting -->
+ 	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+ 		<property name="basePackage" value="com.hw.mapper"/>
+ 	</bean>   
+    
 </beans>
 
 

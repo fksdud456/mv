@@ -7,6 +7,8 @@
 <head>
 <meta charset="EUC-KR">
 <title>Insert title here</title>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <style>
 /* Global CSS*/

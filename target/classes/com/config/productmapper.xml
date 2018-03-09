@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org/DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.hw.mapper.ProductMapper">
+
+	<select id="select" parameterType="java.lang.Integer" 
+	resultType="product">
+		SELECT * FROM T_PRODUCT WHERE ID=#{id}
+	</select>
+	<select id="selectall" resultType="product">
+		SELECT * FROM T_PRODUCT
+	</select>
+	<insert id="insert" parameterType="product">
+		INSERT INTO T_PRODUCT VALUES (#{id},#{name},#{price},SYSDATE,#{imgname})
+	</insert>
+	<update id="update" parameterType="product">
+		UPDATE T_PRODUCT SET NAME=#{name},PRICE=#{price},IMGNAME=#{imgname} WHERE ID=#{id}
+	</update>
+	<delete id="delete" parameterType="java.lang.Integer">
+		DELETE FROM T_PRODUCT WHERE ID=#{id}
+	</delete>
+	
+</mapper>
+
+
+
+
+
+
